@@ -3,8 +3,8 @@
 # SplitView
 In the same view, click on the response event in different areas
 
-The following figure is a custom example, the project has been included in the 3_2 3_3 2_2 segmentation click processing logic
-
+The following figure is a custom example, the project has been included in the 2_2 3_2 3_3  segmentation click processing logic
+下图是一个自定义的例子，该项目已被列入2*2 3*2 3*3模式的分割点击处理逻辑
 ## 效果图
 <img src="https://github.com/luck-fc/SplitView/blob/master/screenshot/style_other.png"/> 
 
@@ -45,7 +45,7 @@ allprojects {
         splitImageView1.setOnXYClickListener(new SplitImageView.onSplitClickListener() {
             @Override
             public void onSplitClick(View v, int position) {
-                show("点到了自定义的第" + (position + 1) + "个区域");
+                show("点到了3*3模式的第" + (position + 1) + "个区域");
             }
         }    
 ```
