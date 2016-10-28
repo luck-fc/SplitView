@@ -12,13 +12,52 @@
 
     <com.luck.view.splitview.SplitImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/splitImageView"
-        android:layout_width="match_parent"
+        android:id="@+id/splitImageView1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#11FFAA"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:style="Style_2_2" />
+
+    <com.luck.view.splitview.SplitImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/splitImageView2"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/splitImageView1"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="#11FFAA"
         android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher"
         app:style="Style_3_2" />
+
+
+    <com.luck.view.splitview.SplitImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/splitImageView3"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/splitImageView2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#11FFAA"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:style="Style_3_3" />
+
+    <com.luck.view.splitview.SplitImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/splitImageView4"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/splitImageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#11FFAA"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
 
 </RelativeLayout>

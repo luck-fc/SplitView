@@ -32,6 +32,7 @@ public class SplitImageView extends ImageView {
     private int position = -1;
     private int width = -1, height = -1;
     private List<Rect> mRects = new ArrayList<>();
+    private List<FRect> mFRects;
     private Rect mRect;
     private float mTouchX;
     private float mTouchY;
@@ -150,6 +151,18 @@ public class SplitImageView extends ImageView {
         mRects.add(myRect9);
     }
 
+    private void other() {
+        mRects.clear();
+        if(mFRects==null){
+            return;
+        }
+        for(int i=0;i<mFRects.size();i++){
+            FRect mFRect = mFRects.get(i);
+            Rect mRect = new Rect((int)(width*mFRect.left),(int)(height*mFRect.top),(int)(width*mFRect.right),(int)(height*mFRect.bottom));
+            mRects.add(mRect);
+        }
+    }
+
     private void initView() {
         setOnClickListener(new OnClickListener() {
             @Override
@@ -178,6 +191,7 @@ public class SplitImageView extends ImageView {
                 break;
             case STYLE_Other:
                 check_STYLE = STYLE_Other;
+                other();
                 break;
             default:
                 check_STYLE = STYLE_2_2;
@@ -186,14 +200,13 @@ public class SplitImageView extends ImageView {
         }
     }
 
-    public void setOtherStyle(List<Rect> rects) {
-        initValues();
-        this.check_STYLE = STYLE_Other;
-        if (rects != null) {
-            this.mRects = rects;
+    public void setOtherStyle(List<FRect> fRects) {
+        if (fRects != null) {
+            this.mFRects = fRects;
         } else {
-            this.mRects.clear();
+            this.mFRects=null;
         }
+        setStyle(STYLE_Other);
     }
 
     @Override
