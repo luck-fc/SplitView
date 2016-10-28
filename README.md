@@ -1,10 +1,11 @@
+[![Build Status](https://travis-ci.org/luck-fc/SplitView.svg?branch=master)](https://travis-ci.org/luck-fc/SplitView)
 [![](https://jitpack.io/v/luck-fc/SplitView.svg)](https://jitpack.io/#luck-fc/SplitView)
 <a href="http://www.methodscount.com/?lib=com.github.luck-fc%3ASplitView%3AV1.0.0"><img src="https://img.shields.io/badge/Methods and size-core: 54 | deps: 16651 | 20 KB-e91e63.svg"/></a>
 # SplitView
 In the same view, click on the response event in different areas
 
 The following figure is a custom example, the project has been included in the 2_2 3_2 3_3  segmentation click processing logic
-下图是一个自定义的例子，该项目已被列入2*2 3*2 3*3模式的分割点击处理逻辑
+下图是一个自定义的例子，该项目已列入 2x2  3x2 3x3 模式的分割点击处理逻辑
 ## 效果图
 <img src="https://github.com/luck-fc/SplitView/blob/master/screenshot/style_other.png"/> 
 
