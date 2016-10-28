@@ -43,7 +43,7 @@ allprojects {
         //以下是3*3 模块的例子，还有2*2 3*2可选  都不满足条件还可以通过setOtherStyle()方法自定义
         SplitImageView splitImageView1 = (SplitImageView) findViewById(R.id.splitImageView1);
         splitImageView1.setOtherStyle(SplitImageView.STYLE_3_3);
-        splitImageView1.setOnXYClickListener(new SplitImageView.onSplitClickListener() {
+        splitImageView1.setOnSplitClickListener(new SplitImageView.onSplitClickListener() {
             @Override
             public void onSplitClick(View v, int position) {
                 show("点到了3*3模式的第" + (position + 1) + "个区域");

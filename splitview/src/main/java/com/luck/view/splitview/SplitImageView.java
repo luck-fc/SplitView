@@ -246,7 +246,7 @@ public class SplitImageView extends ImageView {
         return super.onTouchEvent(event);
     }
 
-    public void setOnXYClickListener(onSplitClickListener onSplitClickListener) {
+    public void setOnSplitClickListener(onSplitClickListener onSplitClickListener) {
         this.mOnSplitClickListener = onSplitClickListener;
     }
 
