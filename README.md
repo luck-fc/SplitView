@@ -1,4 +1,5 @@
 [![](https://jitpack.io/v/luck-fc/SplitView.svg)](https://jitpack.io/#luck-fc/SplitView)
+<a href="http://www.methodscount.com/?lib=com.github.luck-fc%3ASplitView%3AV1.0.0"><img src="https://img.shields.io/badge/Methods and size-core: 54 | deps: 16651 | 20 KB-e91e63.svg"/></a>
 # SplitView
 In the same view, click on the response event in different areas
 
@@ -48,6 +49,17 @@ allprojects {
             }
         }    
 ```
+##其他
+ 如有疑问，请提[issue](https://github.com/luck-fc/SplitView/issues)
+##以后
+    该libary将会继续被维护，相信以后会封装得更方便便捷，敬请期待！
+    如有更好的方式，欢迎随时Pull requests
+    
+开发者 (Developer)
+----------------
+
+* luck-fc - <xiaoorchao@gmail.com>
+
 ## License
 
     Copyright 2016 luck-fc.
