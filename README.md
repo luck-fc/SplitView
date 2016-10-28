@@ -1,6 +1,11 @@
 # SplitView
 In the same view, click on the response event in different areas
 
+The following figure is a custom example, the project has been included in the 3_2 3_3 2_2 segmentation click processing logic
+
+## 效果图
+<img src="https://github.com/luck-fc/SplitView/blob/master/screenshot/style_other.png"/> 
+
 
 ## License
 
