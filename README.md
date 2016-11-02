@@ -24,6 +24,8 @@ allprojects {
 ```xml
     compile 'com.github.luck-fc:SplitView:1.0.0'
 ```
+
+1.0.0 版本
 （1）.xml加入布局
 ```xml
 <com.luck.view.splitview.SplitImageView
@@ -48,6 +50,50 @@ allprojects {
             public void onSplitClick(View v, int position) {
                 show("点到了3*3模式的第" + (position + 1) + "个区域");
             }
+        }    
+```
+
+
+1.0.1 版本 加入SplitView
+（1）.xml加入布局
+需要加载图片用
+```xml
+<com.luck.view.splitview.SplitImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/splitImageView1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#11FFAA"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:style="Style_2_2" />
+```
+不需要加载图片用
+```xml
+<com.luck.view.splitview.SplitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/splitView1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#11FFAA"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:style="Style_2_2" />
+```
+（2）java代码
+
+```xml
+        //以下是3*3 模块的例子，还有2*2 3*2可选  都不满足条件还可以通过setOtherStyle()方法自定义
+        SplitImageView View1 = (SplitImageView) findViewById(R.id.splitImageView1);
+        SplitView View1 = (SplitView) findViewById(R.id.splitView1);
+        View1.setStyle(SplitImageView.STYLE_3_3);
+            View1.setOnSplitClickListener(new Split.onSplitClickListener() {
+                @Override
+                public void onSplitClick(View v, int position) {
+                    show("点到了3*3模式的第" + (position + 1) + "个区域");
+                }
         }    
 ```
 ##其他

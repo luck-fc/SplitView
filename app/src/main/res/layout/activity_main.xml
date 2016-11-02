@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,35 +11,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.luck.view.demo.MainActivity">
 
-    <com.luck.view.splitview.SplitImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.luck.view.splitview.SplitView
         android:id="@+id/splitImageView1"
         android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
+        android:layout_height="100dp"
         android:background="#11FFAA"
-        android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"
-        app:style="Style_2_2" />
+        app:style="Style_2_2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <com.luck.view.splitview.SplitImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/splitImageView2"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/splitImageView1"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="#11FFAA"
         android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher"
-        app:style="Style_3_2" />
-
+        app:style="Style_2_2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <com.luck.view.splitview.SplitImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/splitImageView3"
         android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_toRightOf="@id/splitImageView2"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -49,15 +48,14 @@
         app:style="Style_3_3" />
 
     <com.luck.view.splitview.SplitImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/splitImageView4"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/splitImageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:background="#11FFAA"
         android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"/>
-
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/splitImageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

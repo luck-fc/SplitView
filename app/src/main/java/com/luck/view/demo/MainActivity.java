@@ -6,10 +6,14 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.luck.view.splitview.FRect;
+import com.luck.view.splitview.Split;
 import com.luck.view.splitview.SplitImageView;
+import com.luck.view.splitview.SplitView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.luck.view.demo.R.id.splitImageView1;
 
 /**
  * 作者：luck on 2016/10/27 19:29
@@ -22,33 +26,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SplitImageView splitImageView1 = (SplitImageView) findViewById(R.id.splitImageView1);
-        splitImageView1.setOnSplitClickListener(new SplitImageView.onSplitClickListener() {
+        SplitView splitView1 = (SplitView) findViewById(splitImageView1);
+        splitView1.setOnSplitClickListener(new Split.onSplitClickListener() {
             @Override
             public void onSplitClick(View v, int position) {
-                show("点到了2*2的第" + (position + 1) + "个区域");
+                show("点到了2*2SplitView的第" + (position + 1) + "个区域");
             }
         });
         SplitImageView splitImageView2 = (SplitImageView) findViewById(R.id.splitImageView2);
-        splitImageView2.setOnSplitClickListener(new SplitImageView.onSplitClickListener() {
+        splitImageView2.setOnSplitClickListener(new Split.onSplitClickListener() {
             @Override
             public void onSplitClick(View v, int position) {
-                show("点到了3*2的第" + (position + 1) + "个区域");
+                show("点到了3*2SplitImageView的第" + (position + 1) + "个区域");
             }
         });
         SplitImageView splitImageView3 = (SplitImageView) findViewById(R.id.splitImageView3);
-        splitImageView3.setOnSplitClickListener(new SplitImageView.onSplitClickListener() {
+        splitImageView3.setOnSplitClickListener(new Split.onSplitClickListener() {
             @Override
             public void onSplitClick(View v, int position) {
-                show("点到了3*3的第" + (position + 1) + "个区域");
+                show("点到了3*3SplitImageView的第" + (position + 1) + "个区域");
             }
         });
         SplitImageView splitImageView4 = (SplitImageView) findViewById(R.id.splitImageView4);
         splitImageView4.setOtherStyle(three_Three());
-        splitImageView4.setOnSplitClickListener(new SplitImageView.onSplitClickListener() {
+        splitImageView4.setOnSplitClickListener(new Split.onSplitClickListener() {
             @Override
             public void onSplitClick(View v, int position) {
-                show("点到了自定义的第" + (position + 1) + "个区域");
+                show("点到了自定义SplitImageView的第" + (position + 1) + "个区域");
             }
         });
     }
