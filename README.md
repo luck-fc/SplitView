@@ -75,11 +75,8 @@ allprojects {
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/splitView1"
         android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
+        android:layout_height="100dp"
         android:background="#11FFAA"
-        android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"
         app:style="Style_2_2" />
 ```
 （2）java代码
