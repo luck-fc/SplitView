@@ -22,7 +22,7 @@ allprojects {
 ```
 项目 build.gradle加入
 ```xml
-    compile 'com.github.luck-fc:SplitView:1.0.0'
+    compile 'com.github.luck-fc:SplitView:x.y.z'
 ```
 
 1.0.0 版本
