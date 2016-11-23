@@ -25,36 +25,10 @@ allprojects {
     compile 'com.github.luck-fc:SplitView:x.y.z'
 ```
 
-1.0.0 版本
-（1）.xml加入布局
-```xml
-<com.luck.view.splitview.SplitImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/splitImageView1"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="#11FFAA"
-        android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"
-        app:style="Style_2_2" />
-```
-（2）java代码
+## 更新
+2016.11.23    1.0.2   在1.0.1基础上增加单图片区域点击支持
 
-```xml
-        //以下是3*3 模块的例子，还有2*2 3*2可选  都不满足条件还可以通过setOtherStyle()方法自定义
-        SplitImageView splitImageView1 = (SplitImageView) findViewById(R.id.splitImageView1);
-        splitImageView1.setStyle(SplitImageView.STYLE_3_3);
-        splitImageView1.setOnSplitClickListener(new SplitImageView.onSplitClickListener() {
-            @Override
-            public void onSplitClick(View v, int position) {
-                show("点到了3*3模式的第" + (position + 1) + "个区域");
-            }
-        }    
-```
-
-
-1.0.1 版本 加入SplitView
+1.0.1 和 1.0.2 版本 加入SplitView
 （1）.xml加入布局
 需要加载图片用
 ```xml
@@ -93,6 +67,35 @@ allprojects {
                 }
         }    
 ```
+
+1.0.0 版本
+（1）.xml加入布局
+```xml
+<com.luck.view.splitview.SplitImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/splitImageView1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#11FFAA"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:style="Style_2_2" />
+```
+（2）java代码
+
+```xml
+        //以下是3*3 模块的例子，还有2*2 3*2可选  都不满足条件还可以通过setOtherStyle()方法自定义
+        SplitImageView splitImageView1 = (SplitImageView) findViewById(R.id.splitImageView1);
+        splitImageView1.setStyle(SplitImageView.STYLE_3_3);
+        splitImageView1.setOnSplitClickListener(new SplitImageView.onSplitClickListener() {
+            @Override
+            public void onSplitClick(View v, int position) {
+                show("点到了3*3模式的第" + (position + 1) + "个区域");
+            }
+        }    
+```
+
 ##其他
  如有疑问，请提[issue](https://github.com/luck-fc/SplitView/issues)
 ##以后
