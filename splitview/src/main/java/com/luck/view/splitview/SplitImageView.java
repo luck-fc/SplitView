@@ -1,13 +1,14 @@
 package com.luck.view.splitview;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+
 import java.util.List;
 
 /**
@@ -35,7 +36,7 @@ public class SplitImageView extends ImageView {
         init(context, attrs, defStyleAttr);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public SplitImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
@@ -56,13 +57,20 @@ public class SplitImageView extends ImageView {
         mSplit.init(context, attrs, defStyleAttr);
     }
 
-
+    private boolean isclicking=false;//防止连续点击
     private void initView() {
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mOnSplitClickListener != null) {
+                    if(mSplit.getPosition()!=-1){
+                        if(isclicking){
+                            return;
+                        }
+                    }
+                    isclicking = true;
                     mOnSplitClickListener.onSplitClick(v, mSplit.getPosition());
+                    isclicking = false;
                 }
             }
         });

@@ -3,8 +3,6 @@ package com.luck.view.splitview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -29,12 +27,12 @@ public class Split {
     private int width = -1, height = -1;
     private List<Rect> mRects = new ArrayList<>();
     private List<FRect> mFRects;
-    private Rect mRect;
     private float mTouchX;
     private float mTouchY;
 
     /**
      * 当前选择的位置 从0开始
+     *
      * @return
      */
     protected int getPosition() {
@@ -99,41 +97,44 @@ public class Split {
 
 
     protected void onDraw(Canvas canvas) {
-        if (mRect != null) {
-            Paint paint = new Paint();
-            paint.setColor(Color.BLUE);
-            paint.setAlpha(180);
-            canvas.drawRect(mRect, paint);
-        }
     }
 
-    protected void onTouchEvent(MotionEvent event,View view) {
+    private boolean isclick = false;//是否正在执行点击事件
+    protected void onTouchEvent(MotionEvent event, View view) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                if(isclick){
+                    return;
+                }
+                isclick = true;
                 mTouchX = event.getX();
                 mTouchY = event.getY();
                 if (mRects != null) {
+                    boolean ischeckposition = false;
                     for (int i = 0; i < mRects.size(); i++) {
                         Rect myRect = mRects.get(i);
                         if (myRect.contains((int) mTouchX, (int) mTouchY)) {
+                            ischeckposition = true;
                             position = i;
-                            mRect = myRect;
                             view.invalidate();
                             break;
                         }
                     }
+                    if(!ischeckposition){
+                        position = -1;
+                    }
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                mRect = null;
-                view.invalidate();
+            case MotionEvent.ACTION_POINTER_UP:
+            case MotionEvent.ACTION_CANCEL:
+                isclick = false;
                 break;
         }
     }
 
     private void initValues() {
         this.position = -1;
-        this.mRect = null;
         this.check_STYLE = 1;
     }
 
