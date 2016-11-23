@@ -11,7 +11,7 @@ The following figure is a custom example, the project has been included in the 2
 
 
 ## 更新
-2016.11.23    1.0.2   在1.0.1基础上增加单图片区域点击支持
+2016.11.23    V1.0.2   在 V1.0.1 基础上增加单图片区域点击支持
 
 ## 用法
 引入library 
