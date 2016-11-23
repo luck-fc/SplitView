@@ -3,6 +3,8 @@ package com.luck.view.splitview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -27,6 +29,7 @@ public class Split {
     private int width = -1, height = -1;
     private List<Rect> mRects = new ArrayList<>();
     private List<FRect> mFRects;
+    private Rect mRect;
     private float mTouchX;
     private float mTouchY;
 
@@ -97,6 +100,12 @@ public class Split {
 
 
     protected void onDraw(Canvas canvas) {
+        if (mRect != null) {
+            Paint paint = new Paint();
+            paint.setColor(Color.BLUE);
+            paint.setAlpha(180);
+            canvas.drawRect(mRect, paint);
+        }
     }
 
     private boolean isclick = false;//是否正在执行点击事件
@@ -116,6 +125,7 @@ public class Split {
                         if (myRect.contains((int) mTouchX, (int) mTouchY)) {
                             ischeckposition = true;
                             position = i;
+                            mRect = myRect;
                             view.invalidate();
                             break;
                         }
@@ -126,9 +136,9 @@ public class Split {
                 }
                 break;
             case MotionEvent.ACTION_UP:
-            case MotionEvent.ACTION_POINTER_UP:
-            case MotionEvent.ACTION_CANCEL:
                 isclick = false;
+                mRect = null;
+                view.invalidate();
                 break;
         }
     }
