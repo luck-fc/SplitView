@@ -9,6 +9,10 @@ The following figure is a custom example, the project has been included in the 2
 ## 效果图
 <img src="https://github.com/luck-fc/SplitView/blob/master/screenshot/style_other.png"/> 
 
+
+## 更新
+2016.11.23    1.0.2   在1.0.1基础上增加单图片区域点击支持
+
 ## 用法
 引入library 
 root build.gradle加入
@@ -24,9 +28,6 @@ allprojects {
 ```xml
     compile 'com.github.luck-fc:SplitView:x.y.z'
 ```
-
-## 更新
-2016.11.23    1.0.2   在1.0.1基础上增加单图片区域点击支持
 
 1.0.1 和 1.0.2 版本 加入SplitView
 （1）.xml加入布局
