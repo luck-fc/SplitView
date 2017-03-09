@@ -1,5 +1,7 @@
+
 [![Build Status](https://travis-ci.org/luck-fc/SplitView.svg?branch=master)](https://travis-ci.org/luck-fc/SplitView)
 [![](https://jitpack.io/v/luck-fc/SplitView.svg)](https://jitpack.io/#luck-fc/SplitView)
+[![](https://img.shields.io/github/release/luck-fc/SplitView.svg?maxAge=2592000)](https://github.com/luck-fc/SplitView/releases/tag/1.0.2)
 <a href="http://www.methodscount.com/?lib=com.github.luck-fc%3ASplitView%3A1.0.1"><img src="https://img.shields.io/badge/Methods and size-core: 89 | deps: 16651 | 23 KB-e91e63.svg"/></a>
 # SplitView
 In the same view, click on the response event in different areas
